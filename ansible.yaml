@@ -1,0 +1,8 @@
+- hosts: all 
+  become: true
+  tasks:
+    - name: create new Deployment
+      command: kubectl apply -f /home/osboxes/Docker/Deployment.yaml
+    - name: create new Service
+      command: kubectl apply -f /home/osboxes/Docker/service.yaml
+        
