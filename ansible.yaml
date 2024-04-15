@@ -2,7 +2,7 @@
   become: true
   tasks:
     - name: create new Deployment
-      command: kubectl apply -f /home/osboxes/Docker/ansible-pipeline/Deployment.yaml
+      command: kubectl apply -f /home/osboxes/Docker/ansible-pipeline/Deployment.yaml --validate=false
     - name: create new Service
-      command: kubectl apply -f /home/osboxes/Docker/ansible-pipeline/service.yaml
+      command: kubectl apply -f /home/osboxes/Docker/ansible-pipeline/service.yaml --validate=false
         
